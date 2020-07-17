@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="author" content="KNG Technologies Ltd." />
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    
+    <title>React App</title>
+
+    <!-- CDN -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/3afbe28f9a.js" crossorigin="anonymous"></script>
+    <!-- Anime -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+    <!-- App Styles -->
+    <link rel="stylesheet" href="./styles/index.css" />
+
+
+    <script src="./js/startup.js" ></script>
+    <script src="./js/events.js" ></script>
+  </head>
+
+  <body>
+    <!-- Disabled JS page -->
+    <noscript>
+      <div>
+        <h1>You need to enable JavaScript to run this app.</h1>
+      </div>
+    </noscript>
+
+    <!-- Main content -->
+    <div id="container">
+
+      <!-- NAVIGATION BAR -->
+      <div id="navigation" class="sticky-top">
+        <nav class="navbar navbar-expand-lg">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#toggleDemo" aria-controls="toggleDemo" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+  
+          <a class="navbar-brand mr-5" href="#" style="margin-left: 8%;">
+            <h2>
+                <img class="mr-2" src='./img/favicon.ico' alt="Logo" /> Courier
+            </h2>
+          </a>
+  
+          <div class="collapse navbar-collapse" id="toggleDemo" style="margin-right: 8%;">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Drive</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="user.html">Request</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Delivery Status</a>
+              </li>
+            </ul>
+  
+            <ul class="navbar-nav mt-2 mt-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link" href="#"></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Security</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Company
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="#">About us</a>
+                  <a class="dropdown-item" href="#">How it works</a>
+                  <a class="dropdown-item" href="#">Career</a>
+                  <a class="dropdown-item" href="#">FAQs</a>
+                  <a class="dropdown-item" href="#">Help</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+       
+      <!-- HEADER -->
+      <header>
+        <div class="div-header">
+          <div class="header-content mb-2">
+            <div class="row">
+              <div class="col-lg-7 col-md-6 d-xs-none">
+                <div style="position: absolute; bottom: 0; width: 100%; text-align: center;">
+                  <h1 class="ml9">
+                    <span class="text-wrapper">
+                      <span class="letters">Secured Packaging</span></span>
+                    </span>
+                  </h1>
+                </div>
+              </div>
+  
+              <!-- Authentication box -->
+              <div class="col-lg-5 col-md-6 col-sm-12 px-5 py-3">
+                <div id="auth-box">
+                  <div class="auth-box-heading">
+                    <h1 class="display-3">Sign in</h1>
+                  </div>
+
+                  <div class="auth-box-content">
+                    <div class="auth-clipart">
+                        <button class="btn btn-link"><i class="fa fa-angle-left fa-2x"></i></button>
+                        <div class="auth-clip-img-container">
+                          <img src="img/business-building.png" alt="User" class="auth-clip-img"/>                            
+                        </div>
+                        <button class="btn btn-link"><i class="fa fa-angle-right fa-2x"></i></button>
+                    </div>
+                    
+                    <form class="form-container">
+                      <div class="form-control">
+                        <input type="text" required />
+                        <label>Email</label>
+                      </div>
+                      <br />
+                      <div class="form-control">
+                        <input type="text" required />
+                        <label>Password</label>
+                      </div>
+                      <br />
+                      <div class="form-action row px-4">
+                        <button class="btn btn-lg ml-auto">Sign in</button>
+                        <div class="row col-lg-12 py-4">
+                          <a class="mr-auto">Forgotten Password</a>
+                          <a>Sign up</a>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+
+                  <br />
+                  <hr />
+                  <div class="auth-box-footer text-muted">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, nisi numquam asperiores error eveniet voluptatibus ratione, odio voluptatum, soluta dolore fugit? Autem nobis nostrum vitae, dolores illum dolorem nemo consectetur.</p>
+                  </div>  
+                </div>
+
+                <!--
+                <div id="auth-box">
+                  <div class="auth-box-heading">
+                    <h1 class="display-3">Sign up</h1>
+                  </div>
+
+                  <div class="auth-box-content">
+                    <div class="auth-clipart">
+                        <button class="btn btn-link"><i class="fa fa-angle-left fa-2x"></i></button>
+                        <div class="auth-clip-img-container">
+                          <img src="img/rider-clipart.webp" alt="User" class="auth-clip-img"/>                            
+                        </div>
+                        <button class="btn btn-link"><i class="fa fa-angle-right fa-2x"></i></button>
+                    </div>
+                    
+                    <form class="form-container">
+                      <div class="form-control">
+                        <input type="text" required />
+                        <label>Phone or Email</label>
+                      </div>
+                      <br />
+                      <div class="form-control">
+                        <input type="text" required />
+                        <label>Password</label>
+                      </div>
+                      <br />
+                      <div class="form-action row px-4">
+                        <button class="btn btn-lg ml-auto">Sign up</button>
+                        <div class="row col-lg-12 py-4">
+                          <a class="ml-auto">Already have an account. Sign in</a>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+
+                  <br />
+                  <hr />
+                  <div class="auth-box-footer text-muted">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, nisi numquam asperiores error eveniet voluptatibus ratione, odio voluptatum, soluta dolore fugit? Autem nobis nostrum vitae, dolores illum dolorem nemo consectetur.</p>
+                  </div>  
+                </div>
+              </div>
+            </div>
+          </div> -->
+              </div>
+            </div>
+          </div>
+  
+          <div class="div-header-desc">
+            <a href="#">
+              <i id="div-header-desc-icon" class="fa fa-arrow-circle-down fa-2x"></i>
+            </a>
+          </div>
+        </div>
+      </header>
+
+
+      <!-- Page content -->
+      <div id="page-content">
+        <div class="col-lg-12 body-content">
+            <div class="row">
+              <div class="col-lg-3 mb-5">
+                <img class="rounded" src="img/scooter-laptop.jpg" alt="image" width="100%" height="350px" />
+                <div class="py-3">
+                  <h3 >Make a request</h3>
+                  <hr />
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum eligendi quia officiis eius nihil doloribus aperiam! Veniam soluta quasi numquam velit? Totam quibusdam recusandae repellat voluptatum voluptas. Asperiores, alias provident.</p>
+                </div>
+              </div>
+
+              <div class="col-lg-3 mb-5">
+                <img class="rounded" src="img/mobile-phone-scooter-delivery.jpg" alt="image" width="100%" height="350px"/>
+                <div  class="py-3">
+                  <h3 class="img-caption">Rider Receives Package</h3>
+                  <hr />
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa quibusdam molestias inventore fuga deserunt, magni cupiditate quas quam quaerat rem perferendis eveniet delectus, animi nam a doloribus! Tempore, deserunt exercitationem.</p>
+                </div>
+              </div>
+
+              <div class="col-lg-3 mb-5">
+                <img class="rounded" src="img/scooter-on-large-mobile-phone-making-delivery-vector.jpg" alt="image" width="100%" height="350px"/>
+                <div  class="py-3"> 
+                  <h3 class="img-caption">Gets on the road</h3>
+                  <hr />
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi repellendus iure nostrum est sit itaque. Et sequi soluta eum incidunt, ut consequuntur autem, obcaecati mollitia est nihil ad eos deserunt?</p>
+                </div>
+              </div>
+
+              <div class="col-lg-3 mb-5">
+                <img class="rounded" src="img/scooter-on-laptop.jpg" alt="image" width="100%" height="350px"/>
+                <div class="py-3">
+                  <h3 class="img-caption">Deliver to destination</h3>
+                  <hr />
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed esse nobis iusto ut? Magni reiciendis doloremque dolor quas dolore. Necessitatibus corrupti totam possimus reiciendis! Consequatur a incidunt qui quis sit.</p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="row darkblue-row">
+              <div class="col-lg-3">
+                <img src="img/business-chart.png" alt="business" width="100%"/>
+              </div>
+              <div class="col-lg-6 px-3">
+                <div class="display-4">Content Title</div>
+                <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum nesciunt explicabo quidem, culpa error ut quas in asperiores! Officiis ad rem dolores molestiae totam adipisci omnis ducimus, odit dolore sint.</p>
+              </div>
+              <div class="col-lg-3">
+                <img src="img/business-man.png" alt="business" width="100%"/>
+              </div>
+            </div>
+
+            <div class="parallaxed-content py-5">
+              <div class="parallaxed-desc col-lg-4 ml-auto mx-4 p-5">
+                <h3>Business activities is one of the agendas on our clipboard</h3>
+                <br />
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo nobis porro repudiandae facere harum? Doloremque veniam placeat ut, sapiente natus sint, assumenda tenetur tempore quisquam, excepturi ipsa magnam impedit suscipit?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur laborum soluta incidunt hic debitis repudiandae amet fugiat reiciendis quo unde blanditiis veritatis ratione dolores beatae, eos fugit tempora eaque ipsum.</p>
+                <br />
+                <a href="#">Connect your business &nbsp;&nbsp;<i class="fa fa-arrow-right"></i></a>
+              </div>
+            </div>
+  
+            <div class="row">
+              <div class="col-lg-2">
+                <i class="fa fa-bell fa-6x"></i>
+              </div>
+              <div class="col-lg-8">
+                <div class="display-4">Content Title</div>
+                <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum nesciunt explicabo quidem, culpa error ut quas in asperiores! Officiis ad rem dolores molestiae totam adipisci omnis ducimus, odit dolore sint.</p>
+              </div>
+            </div>
+  
+            <div class="row darkblue-row">
+              <div class="col-lg-2">
+                <i class="fa fa-bell fa-6x"></i>
+              </div>
+              <div class="col-lg-8">
+                <div class="display-4">Content Title</div>
+                <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum nesciunt explicabo quidem, culpa error ut quas in asperiores! Officiis ad rem dolores molestiae totam adipisci omnis ducimus, odit dolore sint.</p>
+              </div>
+            </div>
+  
+            <div class="row">
+              <div class="col-lg-2">
+                <i class="fa fa-bell fa-6x"></i>
+              </div>
+              <div class="col-lg-8">
+                <div class="display-4">Content Title</div>
+                <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum nesciunt explicabo quidem, culpa error ut quas in asperiores! Officiis ad rem dolores molestiae totam adipisci omnis ducimus, odit dolore sint.</p>
+              </div>
+            </div>
+
+            <div class="row">
+              <h3 class="display-4">Hook up with our mobile platforms</h3>
+              <div class="row mt-4">
+                <div class="col-lg-4 phone-content">
+                  <h3>Android</h3>
+                  <br />
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo nobis porro repudiandae facere harum? Doloremque veniam placeat ut, sapiente natus sint, assumenda tenetur tempore quisquam, excepturi ipsa magnam impedit suscipit?</p>
+                  <br />
+                  <a href="#">Connect your business &nbsp;&nbsp;<i class="fa fa-arrow-right"></i></a>
+                </div>
+  
+                <div class="col-lg-4 phone-content ml-auto">
+                  <h3>IOS</h3>
+                  <br />
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo nobis porro repudiandae facere harum? Doloremque veniam placeat ut, sapiente natus sint, assumenda tenetur tempore quisquam, excepturi ipsa magnam impedit suscipit?</p>
+                  <br />
+                  <a href="#">Connect your business &nbsp;&nbsp;<i class="fa fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    
+    <footer>
+      <div>
+        <div class="row">
+          <div class="col-md-4">
+            <div>
+              <h2>
+                <img src='./img/favicon.ico' class="App-logo" alt="logo" /> Courier
+              </h2>
+            </div>
+          </div>
+             
+             <div class="col-md-4">
+                 <ul>
+                     <li>Home</li>
+                     <li>Sign in</li>
+                     <li>Complains and Feedback</li>
+                     <li>FAQs</li>
+                     <li>Terms and Conditions</li>
+                 </ul>
+             </div>
+
+             <div class="col-md-4">
+                 <h3>Follow Us</h3>
+                 <ul class="links">
+                     <li class="facebook">
+                         <img src="./img/facebook.svg"> Facebook
+                     </li>
+                     <li class="twitter">
+                      <img src="./img/twitter.svg"> Twitter
+                     </li>
+                     <li class="instagram">
+                      <img src="./img/instagram.svg"> Instagram
+                     </li>
+                 </ul>
+             </div>
+         </div>
+
+         <div class="copyright">
+             &copy; 2020 &nbsp;<a target="_blank" href="https://kngtechnologies.com">KNG Technologies</a> &nbsp; All Right Reserved.
+         </div> 
+     </div>
+    </footer>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="./js/animation.js" ></script>
+
+    <script type="text/javascript">
+      // Wrap every letter in a span
+      var textWrapper = document.querySelector('.ml9 .letters');
+      textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+      anime.timeline({loop: true})
+        .add({
+          targets: '.ml9 .letter',
+          scale: [0, 1],
+          duration: 1500,
+          elasticity: 600,
+          delay: (el, i) => 45 * (i+1)
+        }).add({
+          targets: '.ml9',
+          opacity: 0,
+          duration: 1000,
+          easing: "easeOutExpo",
+          delay: 1000
+        });
+    </script>
+  </body>
+</html>
